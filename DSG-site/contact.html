@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DSG Digital Strategy & Growth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            padding: 30px;
+        }
+        
+        .contact-info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info-item i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .map-container {
+            height: 300px;
+            margin-top: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Liquid Background Animation -->
+    <div class="liquid-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- Update the navigation menu to remove Projects -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="DSG - Digital Strategy & Growth Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero animate-on-scroll">
+            <h1>Contact Us</h1>
+            <p>Let's discuss how we can help grow your business</p>
+        </section>
+
+        <section class="contact-section animate-on-scroll">
+            <div class="contact-container">
+                <div class="contact-form-container neumorphic">
+                    <h2>Send Us a Message</h2>
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company (Optional)</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="button-62" role="button">Send Message</button>
+                    </div>
+                </div>
+                
+                <div class="contact-info neumorphic">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-info-item">
+                        <i>📱</i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>7075061622</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i>✉️</i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@dsgmedia.space</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i>🕒</i>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday - Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i>💬</i>
+                        <div>
+                            <h3>Social Media</h3>
+                            <p>Follow us on social media for updates and insights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section animate-on-scroll">
+            <h2>Frequently Asked Questions</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>What services does DSG offer?</h3>
+                    <p>We offer digital marketing, performance marketing, lead generation, and web design & development services tailored to your business needs.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>How long does it take to see results?</h3>
+                    <p>While some campaigns can show initial results within days, meaningful results typically take 1-3 months depending on your industry, competition, and campaign objectives.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>What industries do you work with?</h3>
+                    <p>We specialize in IT Services, Software Development, Marketing, Manufacturing, and Gaming industries, but our strategies can be adapted to various business sectors.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>How do you measure success?</h3>
+                    <p>We track key performance indicators like lead generation, conversion rates, ROI, and other metrics specific to your business goals to measure campaign success.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DSG</h3>
+                <p>Digital Strategy & Growth</p>
+                <p>Orbiting Around Your Sales & Marketing Goals.</p>
+                <p>Contact: 7075061622</p>
+            </div>
+            <div class="footer-section">
+                <!-- Update the footer links as well -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DSG - Digital Strategy & Growth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for animations -->
+    <script src="js/animations.js"></script>
+</body>
+</html>

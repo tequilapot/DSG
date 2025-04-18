@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Digital Strategy & Growth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .cookie-policy {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .policy-section {
+            margin-bottom: 30px;
+        }
+        .policy-section h2 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .policy-section ul {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Liquid Background Animation -->
+    <div class="liquid-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="DSG - Digital Strategy & Growth Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cookie-policy animate-on-scroll">
+            <h1>Cookie Policy</h1>
+            <p>Last Updated: June 10, 2023</p>
+
+            <div class="policy-section animate-on-scroll">
+                <h2>1. What Are Cookies</h2>
+                <p>Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you.</p>
+                <p>Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser.</p>
+            </div>
+
+            <!-- Rest of your cookies content -->
+            
+            <div class="policy-section animate-on-scroll">
+                <h2>2. Contact Us</h2>
+                <p>If you have any questions about our Cookie Policy, please contact us at:</p>
+                <p>Email: hello@dsgmedia.space</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Digital Strategy & Goals</h3>
+                <p>Orbiting Around Your Sales & Marketing Goals.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Data Science Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for animations -->
+    <script>
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Liquid background animation
+        document.addEventListener('mousemove', function(e) {
+            const blobs = document.querySelectorAll('.blob');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            blobs.forEach((blob, index) => {
+                const speed = 0.05 * (index + 1);
+                const offsetX = (mouseX - 0.5) * speed * 100;
+                const offsetY = (mouseY - 0.5) * speed * 100;
+                
+                blob.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${1 + mouseY * 0.1})`;
+            });
+        });
+    </script>
+</body>
+</html>

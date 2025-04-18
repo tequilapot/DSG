@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - DSG Digital Strategy & Growth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+        .service-detail {
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .service-detail:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .service-detail:nth-child(even) .service-text {
+            direction: ltr;
+        }
+        
+        .service-detail:nth-child(even) .service-image {
+            direction: ltr;
+        }
+        
+        .service-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-text h2 {
+            margin-bottom: 20px;
+        }
+        
+        .service-text ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .service-text ul li {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .service-detail {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-detail:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Liquid Background Animation -->
+    <div class="liquid-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- Update the navigation menu to remove Projects -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="DSG - Digital Strategy & Growth Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-hero animate-on-scroll">
+            <h1>Our Services</h1>
+            <p>Comprehensive digital marketing solutions to grow your business</p>
+        </section>
+
+        <section class="services-content">
+            <div class="service-detail animate-on-scroll">
+                <div class="service-text">
+                    <h2>Digital Marketing</h2>
+                    <p>Our comprehensive digital marketing strategies are tailored to your business goals and target audience. We create cohesive campaigns that build brand awareness, engage your audience, and drive conversions.</p>
+                    <ul>
+                        <li><strong>Social Media Marketing:</strong> Strategic content creation and community management across platforms</li>
+                        <li><strong>Content Marketing:</strong> Valuable, relevant content that attracts and retains your target audience</li>
+                        <li><strong>Email Marketing:</strong> Personalized campaigns that nurture leads and drive conversions</li>
+                        <li><strong>Influencer Partnerships:</strong> Collaborations with relevant influencers to expand your reach</li>
+                    </ul>
+                    <a href="contact.html" class="button-33" role="button">Get Started</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/digital-marketing.jpg" alt="Digital Marketing">
+                </div>
+            </div>
+
+            <div class="service-detail animate-on-scroll">
+                <div class="service-text">
+                    <h2>Performance Marketing</h2>
+                    <p>Our data-driven performance marketing campaigns focus on measurable results and ROI optimization. We leverage advanced targeting and continuous optimization to maximize your advertising spend.</p>
+                    <ul>
+                        <li><strong>Google Ads:</strong> Search, display, and video campaigns that put your brand in front of ready-to-buy customers</li>
+                        <li><strong>Meta Ads:</strong> Targeted Facebook and Instagram advertising campaigns that drive engagement and conversions</li>
+                        <li><strong>LinkedIn Ads:</strong> B2B advertising that reaches decision-makers and professionals in your industry</li>
+                        <li><strong>Conversion Tracking:</strong> Comprehensive tracking setup to measure campaign performance and ROI</li>
+                    </ul>
+                    <a href="contact.html" class="button-33" role="button">Get Started</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/performance-marketing.jpg" alt="Performance Marketing">
+                </div>
+            </div>
+
+            <div class="service-detail animate-on-scroll">
+                <div class="service-text">
+                    <h2>Lead Generation</h2>
+                    <p>Our strategic lead generation approaches attract and convert high-quality leads for your business. We focus on creating a consistent pipeline of potential customers who are genuinely interested in your products or services.</p>
+                    <ul>
+                        <li><strong>Landing Page Optimization:</strong> High-converting landing pages designed to capture leads</li>
+                        <li><strong>Lead Magnets:</strong> Valuable content offers that incentivize prospects to share their information</li>
+                        <li><strong>Marketing Automation:</strong> Automated workflows that nurture leads through the sales funnel</li>
+                        <li><strong>Lead Nurturing:</strong> Strategic follow-up sequences that build relationships and drive conversions</li>
+                    </ul>
+                    <a href="contact.html" class="button-33" role="button">Get Started</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/lead-generation.jpg" alt="Lead Generation">
+                </div>
+            </div>
+
+            <div class="service-detail animate-on-scroll">
+                <div class="service-text">
+                    <h2>Web Design & Development</h2>
+                    <p>Our custom websites are designed for conversion and exceptional user experience. We create responsive, fast-loading sites that reflect your brand identity and drive business results.</p>
+                    <ul>
+                        <li><strong>Responsive Design:</strong> Mobile-friendly websites that look great on all devices</li>
+                        <li><strong>UX/UI Optimization:</strong> User-centered design that enhances engagement and conversions</li>
+                        <li><strong>E-commerce Solutions:</strong> Custom online stores with seamless checkout experiences</li>
+                        <li><strong>CMS Implementation:</strong> Easy-to-use content management systems for simple updates</li>
+                    </ul>
+                    <a href="contact.html" class="button-33" role="button">Get Started</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/web-design.jpg" alt="Web Design & Development">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section animate-on-scroll">
+            <h2>Ready to Grow Your Business?</h2>
+            <p>Let's discuss how our services can help you achieve your business goals.</p>
+            <a href="contact.html" class="button-62" role="button">Contact Us Today</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DSG</h3>
+                <p>Digital Strategy & Growth</p>
+                <p>Orbiting Around Your Sales & Marketing Goals.</p>
+                <p>Contact: 7075061622</p>
+            </div>
+            <div class="footer-section">
+                <!-- Update the footer links as well -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DSG - Digital Strategy & Growth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for animations -->
+    <script src="js/animations.js"></script>
+</body>
+</html>
