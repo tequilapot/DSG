@@ -335,3 +335,79 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Newsletter subscription
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            if (!emailInput || !isValidEmail(emailInput.value.trim())) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Get form data
+            const formData = new FormData(newsletterForm);
+            const formDataObj = {};
+            formData.forEach((value, key) => {
+                formDataObj[key] = value;
+            });
+            
+            // Add a field to identify this as a newsletter subscription
+            formDataObj.subscription_type = 'newsletter';
+            
+            // Submit to HubSpot
+            const portalId = '242636499'; // Replace with your actual HubSpot portal ID
+            const formId = 'd37a5d05-940b-45b8-9653-43a9e0980213'; // Replace with your newsletter form ID
+            
+            const url = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+            
+            // Prepare data for HubSpot
+            const data = {
+                fields: Object.keys(formDataObj).map(key => ({
+                    name: key,
+                    value: formDataObj[key]
+                })),
+                context: {
+                    pageUri: window.location.href,
+                    pageName: document.title
+                }
+            };
+            
+            // Send to HubSpot
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Newsletter subscription success:', data);
+                
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.textContent = 'Thank you for subscribing to our newsletter!';
+                
+                newsletterForm.reset();
+                newsletterForm.parentNode.insertBefore(successMessage, newsletterForm.nextSibling);
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+            })
+            .catch(error => {
+                console.error('Newsletter subscription error:', error);
+                alert('There was an error processing your subscription. Please try again later.');
+            });
+        });
+    }
+});
