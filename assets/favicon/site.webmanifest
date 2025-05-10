@@ -1,0 +1,24 @@
+{
+    "name": "DSG Digital Strategy & Growth",
+    "short_name": "DSG Media",
+    "icons": [
+      {
+        "src": "/assets/favicon/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/favicon/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/favicon/android-chrome-1024x1024.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+  }

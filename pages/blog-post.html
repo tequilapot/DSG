@@ -164,156 +164,16 @@
     </footer>
 
     <!-- Back to Top Button -->
+   <!-- ... existing code ... -->
+    <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
-
+    
     <!-- JavaScript -->
+    <script src="../js/forms.js"></script>
     <script src="../js/blog-data.js"></script>
+    <script src="../js/blog-post.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the post slug from the URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const postSlug = urlParams.get('post');
-            
-            if (postSlug) {
-                // Find the post from blog-data.js
-                const post = getBlogPostBySlug(postSlug);
-                
-                if (post) {
-                    // Update page title and meta description
-                    document.title = `${post.title} | DSG Digital Strategy & Growth`;
-                    const metaDescription = document.querySelector('meta[name="description"]');
-                    if (metaDescription) {
-                        metaDescription.setAttribute('content', post.excerpt);
-                    }
-                    
-                    // Get the main element and create the blog post detail
-                    const main = document.querySelector('main');
-                    if (main) {
-                        // Create blog post detail structure
-                        const blogPostDetail = document.createElement('article');
-                        blogPostDetail.className = 'blog-post-detail';
-                        
-                        // Header section
-                        const header = document.createElement('header');
-                        header.className = 'blog-post-header';
-                        header.innerHTML = `
-                            <div class="container">
-                                <span class="section-subtitle">${post.category}</span>
-                                <h1>${post.title}</h1>
-                                <div class="blog-post-meta-detail">
-                                    <div class="author-info">
-                                        <img src="${post.author.avatar}" alt="${post.author.name}" class="author-avatar">
-                                        <div>
-                                            <p class="author-name">${post.author.name}</p>
-                                            <p class="author-title">${post.author.title}</p>
-                                        </div>
-                                    </div>
-                                    <div class="post-info">
-                                        <span>${formatPublishDate(post.createdAt)}</span>
-                                        <span>${post.readTime} min read</span>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        
-                        // Hero image
-                        const heroImage = document.createElement('div');
-                        heroImage.className = 'blog-hero-image';
-                        heroImage.innerHTML = `
-                            <div class="container">
-                                <img src="${post.coverImage}" alt="${post.title}">
-                            </div>
-                        `;
-                        
-                        // Content
-                        const content = document.createElement('div');
-                        content.className = 'blog-content';
-                        content.innerHTML = `
-                            <div class="container">
-                                ${post.content}
-                                
-                                <div class="blog-tags">
-                                    ${post.tags.map(tag => `<a href="#" class="blog-tag">${tag}</a>`).join('')}
-                                </div>
-                                
-                                <div class="blog-share">
-                                    <span>Share:</span>
-                                    <div class="blog-share-links">
-                                        <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-                                        <a href="#" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                    </div>
-                                </div>
-                                
-                                <div class="blog-author-bio">
-                                    <img src="${post.author.avatar}" alt="${post.author.name}">
-                                    <div class="author-info">
-                                        <h3>${post.author.name}</h3>
-                                        <p>${post.author.title} at DSG Digital Strategy & Growth</p>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        
-                        // Related posts
-                        const relatedPosts = getRelatedPosts(post, 3);
-                        const relatedPostsSection = document.createElement('section');
-                        relatedPostsSection.className = 'related-posts';
-                        relatedPostsSection.innerHTML = `
-                            <div class="container">
-                                <h2>Related Articles</h2>
-                                <div class="related-posts-grid">
-                                    ${relatedPosts.map((relatedPost, index) => `
-                                        <article class="blog-post-card animate-on-scroll" data-animation-delay="${100 * index}">
-                                            <div class="blog-post-image">
-                                                <img src="${relatedPost.coverImage}" alt="${relatedPost.title}">
-                                            </div>
-                                            <div class="blog-post-content">
-                                                <span class="blog-post-category">${relatedPost.category}</span>
-                                                <h3 class="blog-post-title">${relatedPost.title}</h3>
-                                                <p class="blog-post-excerpt">${relatedPost.excerpt}</p>
-                                                <div class="blog-post-meta">
-                                                    <div class="blog-post-author">
-                                                        <img src="${relatedPost.author.avatar}" alt="${relatedPost.author.name}" class="author-avatar">
-                                                        <span class="author-name">${relatedPost.author.name}</span>
-                                                    </div>
-                                                    <span class="blog-post-read-time">${relatedPost.readTime} min read</span>
-                                                </div>
-                                                <a href="blog-post.html?post=${relatedPost.slug}" class="blog-post-link">Read Article <i class="fas fa-arrow-right"></i></a>
-                                            </div>
-                                        </article>
-                                    `).join('')}
-                                </div>
-                            </div>
-                        `;
-                        
-                        // Append all sections
-                        blogPostDetail.appendChild(header);
-                        blogPostDetail.appendChild(heroImage);
-                        blogPostDetail.appendChild(content);
-                        blogPostDetail.appendChild(relatedPostsSection);
-                        
-                        // Add to page
-                        main.appendChild(blogPostDetail);
-                        
-                        // Initialize animations
-                        initAnimations();
-                    }
-                } else {
-                    // Post not found, redirect to blog index
-                    window.location.href = 'blog.html';
-                }
-            } else {
-                // No post slug specified, redirect to blog index
-                window.location.href = 'blog.html';
-            }
-        });
-    </script>
-    <!-- HubSpot Tracking Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242636499.js"></script>
 </body>
 </html>
