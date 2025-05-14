@@ -459,11 +459,18 @@ section {
     justify-content: center;
     width: 60px;
     height: 60px;
-    background-color: var(--primary-light);
+    background-color: #FFFFFF;
     color: var(--primary);
     border-radius: 12px;
     margin-bottom: var(--spacing-md);
     font-size: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.service-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 .service-title {
@@ -1383,6 +1390,49 @@ section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: var(--spacing-xl);
+}
+
+/* Social platforms icons in service card */
+.social-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.social-platforms i {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary-light);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.social-platforms i:hover {
+    transform: translateY(-3px);
+    background-color: var(--primary-light);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+/* All service icons have consistent styling */
+.service-icon {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary-light);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background-color: var(--primary-light);
+    color: var(--white);
 }
 
 /* Back to Top Button */
